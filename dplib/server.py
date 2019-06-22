@@ -20,7 +20,6 @@ from enum import Enum
 import asyncio
 import os
 from socket import socket, AF_INET, SOCK_DGRAM
-
 from dplib.parse import render_text, decode_ingame_text
 
 
@@ -274,7 +273,7 @@ class Server(object):
         pass
 
     @asyncio.coroutine
-    def on_elim(self, killer_nick, killer_weapon, victim_nick, victim_weapon):
+    def on_elim(self, killer_nick, killer_weapon, victim_nick, victim_weapon, suicide):
         """
         On elim can be overridden using the :func:`.Server.event` decorator.
 
